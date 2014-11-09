@@ -5,11 +5,6 @@
 1. Install [Git](http://git-scm.com), if you don't have it yet.
 2. Install [NodeJS](http://nodejs.org/download/), if you don't have it yet.
 
-## How to install?
-
-```sh
-$ [sudo] npm install -g dotfiles
-```
 
 ## Credits
 
