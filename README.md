@@ -20,4 +20,4 @@ $ [sudo] npm install -g dotfiles
 
 ## License
 
-[BSD License](https://github.com/eduardolundgren/dotfiles/blob/master/LICENSE.md) © Eduardo Lundgren
+[BSD License](https://github.com/eduardolundgren/dotfiles/blob/master/LICENSE.md)
