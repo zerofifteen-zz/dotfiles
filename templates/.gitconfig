@@ -8,6 +8,7 @@
     aa = add .
 
     # Commit
+    ci = commit
     cm = commit -m
     ca = commit --amend -m
 
@@ -27,7 +28,8 @@
     rl = remote -v
 
     # Status
-    st = status -s
+    st = status
+    ss = status -s
 
     # Pull
     pl   = pull
@@ -70,11 +72,11 @@
     old = red bold
     new = green bold
 [color "status"]
-    added     = cyan bold
-    branch    = cyan bold
-    changed   = magenta bold
-    deleted   = red bold
-    untracked = yellow bold
+    added     = green
+    branch    = green
+    changed   = yellow
+    deleted   = cyan
+    untracked = red
 [push]
     # 'git push' will push the current branch to its tracking branch
     # the usual default is to push all branches
@@ -82,3 +84,7 @@
 [core]
     editor = <%- editor %>
     excludesfile = ~/.gitignore_global
+    autocrlf = input
+    whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+[apply]
+    whitespace = fix
