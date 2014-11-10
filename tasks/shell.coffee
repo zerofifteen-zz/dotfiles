@@ -53,7 +53,9 @@ module.exports = ->
   if os.platform('darwin')
     shell.brew =
       command: [
-        'which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+        '(which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)")'
+        # 'brew doctor'
+        'brew update'
       ].join('&&')
       options:
         stdout: true
