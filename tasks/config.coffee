@@ -30,6 +30,11 @@ module.exports = ->
       src: userhome('.dotfiles/.rbenv')
       dest: userhome('.rbenv')
 
+  ssh:
+    path_config:
+      src: userhome('.dotfiles/.ssh.config')
+      dest: userhome('.ssh/config')
+
   themes:
     path_iterm: userhome('.dotfiles/themes/iterm')
 

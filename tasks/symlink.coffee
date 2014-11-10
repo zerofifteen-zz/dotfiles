@@ -21,6 +21,10 @@ module.exports = ->
     dest: '<%= config.git.path_gitignore.dest %>'
     relativeSrc: '<%= config.git.path_gitignore.src %>'
 
+  symlink.ssh =
+    dest: '<%= config.ssh.path_config.dest %>'
+    relativeSrc: '<%= config.ssh.path_config.src %>'
+
   symlink.ruby =
     dest: '<%= config.ruby.path_rbenv.dest %>'
     relativeSrc: '<%= config.ruby.path_rbenv.src %>'

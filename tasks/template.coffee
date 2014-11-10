@@ -22,6 +22,12 @@ module.exports = ->
     files:
       '<%= config.osx.path_osx %>': ['templates/.osx']
 
+  ssh:
+    options:
+      data: '<%= config %>'
+    files:
+      '<%= config.ssh.path_config.src %>': ['templates/.ssh.config']
+
   vim:
     options:
       data: '<%= config %>'
