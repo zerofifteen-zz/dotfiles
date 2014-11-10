@@ -15,11 +15,6 @@ module.exports = ->
       directory: '<%= config.themes.path_iterm %>'
       repository: 'https://github.com/deepsweet/Monokai-Soda-iTerm.git'
 
-  vim_vundle:
-    options:
-      directory: '<%= config.vim.path_vundle %>'
-      repository: 'https://github.com/gmarik/Vundle.vim.git'
-
   z:
     options:
       directory: '<%= config.z.path_z.src %>'

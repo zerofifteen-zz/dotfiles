@@ -30,8 +30,4 @@ module.exports = ->
       dest: '/usr/local/bin/subl'
       relativeSrc: '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
 
-  symlink.vim =
-    dest: '<%= config.vim.path_vimrc.dest %>'
-    relativeSrc: '<%= config.vim.path_vimrc.src %>'
-
   return symlink

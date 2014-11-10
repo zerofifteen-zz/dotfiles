@@ -70,11 +70,3 @@ module.exports = ->
       stderr: true
 
   return shell
-
-# vim_plugins: {
-#     command: 'vim +PluginInstall +qall',
-#     options: {
-#         stdout: true,
-#         stderr: true
-#     }
-# },
