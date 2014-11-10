@@ -32,7 +32,7 @@ module.exports = ->
 
   ssh:
     path_config:
-      src: userhome('.dotfiles/.ssh.config')
+      src: userhome('.dotfiles/.ssh/config')
       dest: userhome('.ssh/config')
 
   themes:

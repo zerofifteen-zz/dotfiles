@@ -26,7 +26,7 @@ module.exports = ->
     options:
       data: '<%= config %>'
     files:
-      '<%= config.ssh.path_config.src %>': ['templates/.ssh.config']
+      '<%= config.ssh.path_config.src %>': ['templates/.ssh/config']
 
   vim:
     options:
