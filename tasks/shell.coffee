@@ -7,7 +7,7 @@ module.exports = ->
   if os.platform('darwin')
     shell.osx =
       command: [
-        'source <%= config.osx.path_osx %>'
+        'source <%= config.paths.osx %>'
       ].join('&&')
       options:
         stdout: true
@@ -16,7 +16,7 @@ module.exports = ->
     shell.iterm =
       command: [
         '[ -d "/Applications/iTerm.app" ]'
-        'open <%= config.themes.path_iterm %>/Monokai\\ Soda.itermcolors || echo "iTerm App is not installed"'
+        'open <%= config.paths.themes.iterm %>/Monokai\\ Soda.itermcolors || echo "iTerm App is not installed"'
       ].join('&&')
       options:
         stdout: true
@@ -31,13 +31,13 @@ module.exports = ->
       stdout: true
       stderr: true
 
-  shell.ruby =
-    command: [
-      'sudo gem update --system'
-    ].join('&&')
-    options:
-      stdout: true
-      stderr: true
+  # shell.ruby =
+  #   command: [
+  #     'sudo gem update --system'
+  #   ].join('&&')
+  #   options:
+  #     stdout: true
+  #     stderr: true
 
   shell.pip =
     command: [
@@ -64,7 +64,7 @@ module.exports = ->
         stderr: true
 
   shell.z =
-    command: 'touch <%= config.z.path_z.dest %>'
+    command: 'touch <%= config.paths.z %>'
     options:
       stdout: true
       stderr: true

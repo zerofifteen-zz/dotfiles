@@ -2,49 +2,29 @@ module.exports = ->
 
   userhome = require('userhome')
 
-  aliases:
-    path_aliases: userhome('.dotfiles/.aliases')
+  paths:
+    bash:
+      rc: userhome('.dotfiles/.bashrc')
+      profile: userhome('.dotfiles/.bash_profile')
 
-  bash:
-    path_bashrc:
-      src: userhome('.dotfiles/.bashrc')
-      dest: userhome('.bashrc')
-    path_bash_profile:
-      src: userhome('.dotfiles/.bash_profile')
-      dest: userhome('.bash_profile')
+    git:
+      config: userhome('.dotfiles/.gitconfig')
+      ignore: userhome('.dotfiles/.gitignore_global')
 
-  git:
-    path_gitconfig:
-      src: userhome('.dotfiles/.gitconfig')
-      dest: userhome('.gitconfig')
-    path_gitignore:
-      src: userhome('.dotfiles/.gitignore_global')
-      dest: userhome('.gitignore_global')
+    osx: userhome('.dotfiles/.osx')
 
-  osx:
-    path_osx: userhome('.dotfiles/.osx')
+    ruby:
+      build: userhome('.dotfiles/.rbenv/plugins/ruby-build')
+      rbenv: userhome('.dotfiles/.rbenv')
 
-  ruby:
-    path_build: userhome('.dotfiles/.rbenv/plugins/ruby-build')
-    path_rbenv:
-      src: userhome('.dotfiles/.rbenv')
-      dest: userhome('.rbenv')
+    ssh:
+      config: userhome('.dotfiles/.ssh/config')
 
-  ssh:
-    path_config:
-      src: userhome('.dotfiles/.ssh/config')
-      dest: userhome('.ssh/config')
+    themes:
+      iterm: userhome('.dotfiles/themes/iterm')
 
-  themes:
-    path_iterm: userhome('.dotfiles/themes/iterm')
+    vim:
+      rc: userhome('.dotfiles/.vimrc')
+      vundle: userhome('.dotfiles/.vundle')
 
-  vim:
-    path_vimrc:
-      src: userhome('.dotfiles/.vimrc')
-      dest: userhome('.vimrc')
-    path_vundle: userhome('.dotfiles/.vundle')
-
-  z:
-    path_z:
-      src: userhome('.dotfiles/z')
-      dest: userhome('.z')
+    z: userhome('.dotfiles/z')
