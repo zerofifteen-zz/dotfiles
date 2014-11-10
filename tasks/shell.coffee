@@ -57,6 +57,7 @@ module.exports = ->
         # 'brew doctor'
         'brew update'
         'brew install git-extras'
+        'brew install ngrok'
       ].join('&&')
       options:
         stdout: true
@@ -69,10 +70,6 @@ module.exports = ->
       stderr: true
 
   return shell
-
-# git_extras: {
-#     command: '(cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install)'
-# }
 
 # vim_plugins: {
 #     command: 'vim +PluginInstall +qall',
