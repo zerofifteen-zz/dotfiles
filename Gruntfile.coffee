@@ -19,6 +19,6 @@ module.exports = (grunt) ->
     'copy'
     'template'
     'gitclone'
-    'shell'
     'symlink'
+    'shell'
   ]);

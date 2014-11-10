@@ -1,33 +1,34 @@
 module.exports = ->
 
   os = require('os')
+  userhome = require('userhome')
 
   symlink = { }
 
   symlink.bashrc =
-    dest: '<%= config.bash.path_bashrc.dest %>'
-    relativeSrc: '<%= config.bash.path_bashrc.src %>'
+    dest: userhome('.bashrc')
+    relativeSrc: '<%= config.paths.bash.rc %>'
 
   if os.platform('darwin')
     symlink.bash_profile =
-      dest: '<%= config.bash.path_bash_profile.dest %>'
-      relativeSrc: '<%= config.bash.path_bash_profile.src %>'
+      dest: userhome('.bash_profile')
+      relativeSrc: '<%= config.paths.bash.profile %>'
 
   symlink.git_config =
-    dest: '<%= config.git.path_gitconfig.dest %>'
-    relativeSrc: '<%= config.git.path_gitconfig.src %>'
+    dest: userhome('.gitconfig')
+    relativeSrc: '<%= config.paths.git.config %>'
 
   symlink.git_ignore =
-    dest: '<%= config.git.path_gitignore.dest %>'
-    relativeSrc: '<%= config.git.path_gitignore.src %>'
+    dest: userhome('.gitignore_global')
+    relativeSrc: '<%= config.paths.git.ignore %>'
 
   symlink.ssh =
-    dest: '<%= config.ssh.path_config.dest %>'
-    relativeSrc: '<%= config.ssh.path_config.src %>'
+    dest: userhome('.ssh/config')
+    relativeSrc: '<%= config.paths.ssh.config %>'
 
   symlink.ruby =
-    dest: '<%= config.ruby.path_rbenv.dest %>'
-    relativeSrc: '<%= config.ruby.path_rbenv.src %>'
+    dest: userhome('.rbenv')
+    relativeSrc: '<%= config.paths.ruby.rbenv %>'
 
   if os.platform('darwin')
     symlink.sublime =

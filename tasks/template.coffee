@@ -5,32 +5,32 @@ module.exports = ->
       data: '<%= config %>'
 
     files:
-      '<%= config.bash.path_bashrc.src %>': ['templates/.bashrc']
-      '<%= config.bash.path_bash_profile.src %>': ['templates/.bash_profile']
+      '<%= config.paths.bash.rc %>': ['templates/.bashrc']
+      '<%= config.paths.bash.profile %>': ['templates/.bash_profile']
 
   git:
     options:
       data: '<%= config %>'
 
     files:
-      '<%= config.git.path_gitconfig.src %>': ['templates/.gitconfig']
-      '<%= config.git.path_gitignore.src %>': ['templates/.gitignore_global']
+      '<%= config.paths.git.config %>': ['templates/.gitconfig']
+      '<%= config.paths.git.ignore %>': ['templates/.gitignore_global']
 
   osx:
     options:
       data: '<%= config %>'
     files:
-      '<%= config.osx.path_osx %>': ['templates/.osx']
+      '<%= config.paths.osx %>': ['templates/.osx']
 
   ssh:
     options:
       data: '<%= config %>'
     files:
-      '<%= config.ssh.path_config.src %>': ['templates/.ssh/config']
+      '<%= config.paths.ssh.config %>': ['templates/.ssh/config']
 
   vim:
     options:
       data: '<%= config %>'
 
     files:
-      '<%= config.vim.path_vimrc.src %>': ['templates/.vimrc']
+      '<%= config.paths.vim.rc %>': ['templates/.vimrc']
