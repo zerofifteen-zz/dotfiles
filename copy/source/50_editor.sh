@@ -17,3 +17,6 @@ function qs() {
   pwd | perl -ne"s#^$(echo ~/.dotfiles)## && exit 1" && cd ~/.dotfiles
   q ~/.dotfiles
 }
+
+# Server
+alias server='open http://localhost:8000 && http-server -p 8000'
