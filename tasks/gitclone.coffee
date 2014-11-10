@@ -20,16 +20,7 @@ module.exports = ->
       directory: '<%= config.vim.path_vundle %>'
       repository: 'https://github.com/gmarik/Vundle.vim.git'
 
-  # oh_my_zsh: {
-  #     options: {
-  #         directory: '<%= config.zsh.path_oh_my_zsh %>',
-  #         repository: 'https://github.com/robbyrussell/oh-my-zsh.git'
-  #     }
-  # },
-
-  # zsh_syntax_highlighting: {
-  #     options: {
-  #         directory: '<%= config.zsh.path_plugin_syntax %>',
-  #         repository: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
-  #     }
-  # }
+  z:
+    options:
+      directory: '<%= config.z.path_z.src %>'
+      repository: 'https://github.com/rupa/z.git'

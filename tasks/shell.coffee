@@ -50,35 +50,22 @@ module.exports = ->
       stderr: true
 
 
-  # if os.platform('darwin')
-  #   shell.brew =
-  #     command: [
-  #       'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-  #     ].join('&&')
-  #     options:
-  #       stdout: true
-  #       stderr: true
+  if os.platform('darwin')
+    shell.brew =
+      command: [
+        'which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+      ].join('&&')
+      options:
+        stdout: true
+        stderr: true
+
+  shell.z =
+    command: 'touch <%= config.z.path_z.dest %>'
+    options:
+      stdout: true
+      stderr: true
 
   return shell
-
-
-
-
-# brew: {
-#     command: 'ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"',
-#     options: {
-#         stdout: true,
-#         stderr: true
-#     }
-# },
-
-# brew_tig: {
-#     command: 'brew install tig'
-# },
-
-# brew_ngrok: {
-#     command: 'brew install ngrok'
-# },
 
 # git_extras: {
 #     command: '(cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install)'
@@ -91,19 +78,3 @@ module.exports = ->
 #         stderr: true
 #     }
 # },
-
-# z: {
-#     command: 'touch <%= config.z.path_z_system %>',
-#     options: {
-#         stdout: true,
-#         stderr: true
-#     }
-# },
-
-# zsh: {
-#     command: 'chsh -s /bin/zsh',
-#     options: {
-#         stdout: true,
-#         stderr: true
-#     }
-# }

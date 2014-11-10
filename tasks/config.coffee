@@ -41,4 +41,5 @@ module.exports = ->
 
   z:
     path_z:
+      src: userhome('.dotfiles/z')
       dest: userhome('.z')

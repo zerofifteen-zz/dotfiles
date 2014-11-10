@@ -41,6 +41,6 @@ function md() {
 }
 
 # Fast directory switching
-# _Z_NO_PROMPT_COMMAND=1
-# _Z_DATA=~/.dotfiles/caches/.z
-# . ~/.dotfiles/libs/z/z.sh
+_Z_NO_PROMPT_COMMAND=1
+_Z_DATA=~/.z
+. ~/.dotfiles/z/z.sh

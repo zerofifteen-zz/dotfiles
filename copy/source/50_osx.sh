@@ -15,7 +15,7 @@ alias c="tr -d '\n' | pbcopy"
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
 
 # Open in Sublime
-alias slime='open -a "Sublime Text"'
+alias slime='q'
 
 # Create a new Parallels VM from template, replacing the existing one.
 function vm_template() {
