@@ -13,10 +13,6 @@ module.exports = ->
 
     osx: userhome('.dotfiles/.osx')
 
-    ruby:
-      build: userhome('.dotfiles/.rbenv/plugins/ruby-build')
-      rbenv: userhome('.dotfiles/.rbenv')
-
     ssh:
       config: userhome('.dotfiles/.ssh/config')
 

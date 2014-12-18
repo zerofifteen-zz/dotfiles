@@ -1,15 +1,5 @@
 module.exports = ->
 
-  ruby_rbenv:
-    options:
-      directory: '<%= config.paths.ruby.rbenv %>'
-      repository: 'https://github.com/sstephenson/rbenv.git'
-
-  ruby_build:
-    options:
-      directory: '<%= config.paths.ruby.build %>'
-      repository: 'https://github.com/sstephenson/ruby-build.git'
-
   theme_iterm:
     options:
       directory: '<%= config.paths.themes.iterm %>'

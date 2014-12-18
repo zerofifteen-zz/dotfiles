@@ -30,10 +30,6 @@ module.exports = ->
     dest: userhome('.tmux.conf')
     relativeSrc: '<%= config.paths.tmux.config %>'
 
-  symlink.ruby =
-    dest: userhome('.rbenv')
-    relativeSrc: '<%= config.paths.ruby.rbenv %>'
-
   if os.platform('darwin')
     symlink.sublime =
       dest: '/usr/local/bin/subl'

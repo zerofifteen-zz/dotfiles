@@ -74,6 +74,5 @@ function txt_sub_restore() {
 
 
 # TODO: Move ?
-export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
 source /usr/local/bin/virtualenvwrapper.sh
 

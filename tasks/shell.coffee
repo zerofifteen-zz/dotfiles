@@ -31,14 +31,6 @@ module.exports = ->
       stdout: true
       stderr: true
 
-  # shell.ruby =
-  #   command: [
-  #     'sudo gem update --system'
-  #   ].join('&&')
-  #   options:
-  #     stdout: true
-  #     stderr: true
-
   shell.pip =
     command: [
       'sudo easy_install pip'

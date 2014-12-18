@@ -8,6 +8,5 @@ module.exports = ->
 
     src: [
       userhome('.dotfiles')
-      '<%= config.paths.ruby.rbenv %>'
       '<%= config.paths.z %>'
     ]
