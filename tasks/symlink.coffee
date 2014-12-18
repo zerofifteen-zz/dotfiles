@@ -26,6 +26,10 @@ module.exports = ->
     dest: userhome('.ssh/config')
     relativeSrc: '<%= config.paths.ssh.config %>'
 
+  symlink.tmux =
+    dest: userhome('.tmux.conf')
+    relativeSrc: '<%= config.paths.tmux.config %>'
+
   symlink.ruby =
     dest: userhome('.rbenv')
     relativeSrc: '<%= config.paths.ruby.rbenv %>'

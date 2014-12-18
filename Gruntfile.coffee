@@ -22,3 +22,10 @@ module.exports = (grunt) ->
     'symlink'
     'shell'
   ]);
+
+  grunt.registerTask('setup-templates', [
+    'banner'
+    'prompt'
+    'template'
+    'symlink'
+  ]);

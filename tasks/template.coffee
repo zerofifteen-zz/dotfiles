@@ -28,6 +28,12 @@ module.exports = ->
     files:
       '<%= config.paths.ssh.config %>': ['templates/.ssh/config']
 
+  tmux:
+    options:
+      data: '<%= config %>'
+    files:
+      '<%= config.paths.tmux.config %>': ['templates/.tmux.conf']
+
   vim:
     options:
       data: '<%= config %>'

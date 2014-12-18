@@ -23,6 +23,9 @@ module.exports = ->
     themes:
       iterm: userhome('.dotfiles/themes/iterm')
 
+    tmux:
+      config: userhome('.dotfiles/.tmux.conf')
+
     vim:
       rc: userhome('.dotfiles/.vimrc')
       vundle: userhome('.dotfiles/.vundle')
