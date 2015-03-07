@@ -41,6 +41,14 @@ module.exports = ->
       stdout: true
       stderr: true
 
+  shell.ruby =
+    command: [
+      'sudo gem install teamocil'
+    ].join('&&')
+    options:
+      stdout: true
+      stderr: true
+
 
   if os.platform('darwin')
     shell.brew =
@@ -48,8 +56,10 @@ module.exports = ->
         '(which brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)")'
         # 'brew doctor'
         'brew update'
-        'brew install git-extras'
-        'brew install ngrok'
+        '(which git-extras || brew install git-extras)'
+        '(which ngrok || brew ngrok)'
+        '(which tmux || brew install tmux)'
+        '(which reattach-to-user-namespace || brew install reattach-to-user-namespace)'
       ].join('&&')
       options:
         stdout: true

@@ -8,8 +8,8 @@ export PATH
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
 
-# Make 'less' more.
-# eval "$(lesspipe.sh)"
+# Server
+alias server='open http://localhost:8000 && http-server -p 8000'
 
 # Start ScreenSaver. This will lock the screen if locking is enabled.
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
