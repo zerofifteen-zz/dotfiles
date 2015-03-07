@@ -11,6 +11,10 @@ module.exports = ->
       config: userhome('.dotfiles/.gitconfig')
       ignore: userhome('.dotfiles/.gitignore_global')
 
+    hg:
+      # config: userhome('.dotfiles/.gitconfig')
+      ignore: userhome('.dotfiles/.hgignore_global')
+
     osx: userhome('.dotfiles/.osx')
 
     ssh:

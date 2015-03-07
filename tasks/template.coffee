@@ -16,6 +16,15 @@ module.exports = ->
       '<%= config.paths.git.config %>': ['templates/.gitconfig']
       '<%= config.paths.git.ignore %>': ['templates/.gitignore_global']
 
+
+  hg:
+    options:
+      data: '<%= config %>'
+
+    files:
+      # '<%= config.paths.git.config %>': ['templates/.gitconfig']
+      '<%= config.paths.hg.ignore %>': ['templates/.hgignore_global']
+
   osx:
     options:
       data: '<%= config %>'
