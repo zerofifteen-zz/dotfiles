@@ -41,6 +41,14 @@ module.exports = ->
       stdout: true
       stderr: true
 
+  shell.ruby =
+    command: [
+      'sudo gem install teamocil'
+    ].join('&&')
+    options:
+      stdout: true
+      stderr: true
+
 
   if os.platform('darwin')
     shell.brew =
