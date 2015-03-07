@@ -57,3 +57,8 @@ Desktop.ini
 
 # NPM
 .npmignore
+
+# Sublime project files #
+#########################
+*.sublime-project
+*.sublime-workspace
