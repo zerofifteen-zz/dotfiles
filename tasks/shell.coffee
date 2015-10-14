@@ -24,6 +24,7 @@ module.exports = ->
 
   shell.node =
     command: [
+      'npm config set prefix \'~/.npm-packages\''
       'sudo n latest'
       'sudo n stable'
     ].join('&&')
@@ -65,10 +66,10 @@ module.exports = ->
         stdout: true
         stderr: true
 
-  shell.z =
-    command: 'touch <%= config.paths.z %>'
-    options:
-      stdout: true
-      stderr: true
+  # shell.z =
+  #   command: 'touch <%= config.paths.z %>'
+  #   options:
+  #     stdout: true
+  #     stderr: true
 
   return shell
