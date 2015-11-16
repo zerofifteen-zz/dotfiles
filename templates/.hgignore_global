@@ -3,5 +3,11 @@ syntax: glob
 *~
 .DS_Store
 
+# Sublime project files #
+#########################
 *.sublime-project
 *.sublime-workspace
+
+# Atom.io project files #
+#########################
+.sync-config.cson

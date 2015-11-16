@@ -62,3 +62,7 @@ Desktop.ini
 #########################
 *.sublime-project
 *.sublime-workspace
+
+# Atom.io project files #
+#########################
+.sync-config.cson
