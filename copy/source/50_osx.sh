@@ -78,4 +78,3 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # NPM install path
 export PATH="$PATH:$HOME/.npm-packages/bin"
-

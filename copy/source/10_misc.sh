@@ -10,3 +10,9 @@ function path_remove() {
   # output the new array
   echo "${t[*]}"
 }
+
+# TODO: Move ?
+source /usr/local/bin/virtualenvwrapper.sh
+
+# NPM install path
+export PATH="$PATH:$HOME/.npm-packages/bin"
