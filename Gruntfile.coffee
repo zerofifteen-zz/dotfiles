@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = (grunt) ->
   path = require('path')
@@ -9,7 +9,7 @@ module.exports = (grunt) ->
   )
 
   grunt.task.registerTask('banner', ->
-      console.log(grunt.file.read('templates/.banner'))
+    console.log(grunt.file.read('templates/.banner'))
   )
 
   grunt.registerTask('setup', [
@@ -21,11 +21,11 @@ module.exports = (grunt) ->
     'gitclone'
     'symlink'
     'shell'
-  ]);
+  ])
 
   grunt.registerTask('setup-templates', [
     'banner'
     'prompt'
     'template'
     'symlink'
-  ]);
+  ])
