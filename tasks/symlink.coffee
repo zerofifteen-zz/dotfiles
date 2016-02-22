@@ -9,7 +9,7 @@ module.exports = ->
     dest: userhome('.bashrc')
     relativeSrc: '<%= config.paths.bash.rc %>'
 
-  if os.platform('darwin')
+  if os.platform() is 'darwin'
     symlink.bash_profile =
       dest: userhome('.bash_profile')
       relativeSrc: '<%= config.paths.bash.profile %>'
@@ -30,7 +30,7 @@ module.exports = ->
     dest: userhome('.tmux.conf')
     relativeSrc: '<%= config.paths.tmux.config %>'
 
-  if os.platform('darwin')
+  if os.platform() is 'darwin'
     symlink.sublime =
       dest: '/usr/local/bin/subl'
       relativeSrc: '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
