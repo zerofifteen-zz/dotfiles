@@ -48,6 +48,8 @@ function vm_template() {
   open -g "$dest"
 }
 
+alias bashreset="source ~/.bashrc"
+
 # Export Localization.prefPane text substitution rules.
 function txt_sub_backup() {
   local prefs=~/Library/Preferences/.GlobalPreferences.plist
