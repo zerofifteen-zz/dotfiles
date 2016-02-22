@@ -1,0 +1,17 @@
+skipping directory /Applications
+skipping directory /Library
+skipping directory /Network
+skipping directory /System
+skipping directory /Users
+skipping directory /Volumes
+skipping directory /bin
+skipping directory /cores
+skipping directory /dev
+skipping directory /home
+skipping directory /net
+skipping directory /private
+skipping directory /sbin
+skipping directory /usr
+skipping non-regular file "etc"
+installer.failurerequests
+skipping non-regular file "tmp"

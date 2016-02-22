@@ -26,6 +26,7 @@ module.exports = (grunt) ->
   grunt.registerTask('setup-templates', [
     'banner'
     'prompt'
+    'copy'
     'template'
     'symlink'
   ])

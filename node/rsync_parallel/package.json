@@ -1,0 +1,22 @@
+{
+  "name": "rsync_parallel",
+  "version": "0.0.1",
+  "main": "lib/rsync_parallel.js",
+  "author": {
+    "name": "Michael Vera"
+  },
+  "bin": {
+    "rsync_parallel": "bin/rsync_parallel.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.1"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "chalk": "^1.1.1",
+    "dataStream": "0.0.5",
+    "lodash": "^4.5.0",
+    "rsync": "^0.4.0"
+  }
+}
