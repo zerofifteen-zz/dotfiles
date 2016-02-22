@@ -84,16 +84,11 @@ module.exports = ->
         '(which git-extras || brew install git-extras)'
         '(which ngrok || brew ngrok)'
         '(which tmux || brew install tmux)'
+        '(which parallel || brew install parallel)'
         '(which reattach-to-user-namespace || brew install reattach-to-user-namespace)'
       ].join('&&')
       options:
         stdout: true
         stderr: true
-
-  # shell.z =
-  #   command: 'touch <%= config.paths.z %>'
-  #   options:
-  #     stdout: true
-  #     stderr: true
-
+        
   return shell
