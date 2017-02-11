@@ -1,7 +1,7 @@
 [user]
-    name = <%- git.name %>
-    email = <%- git.email %>
-    editor = <%- editor %>
+    name = {{ git.name }}
+    email = {{ git.email }}
+    editor = {{ editor }}
 [alias]
     # Add
     ad = add
@@ -82,7 +82,7 @@
     # the usual default is to push all branches
     default = tracking
 [core]
-    editor = <%- editor %>
+    editor = {{ editor }}
     excludesfile = ~/.gitignore_global
     autocrlf = input
     whitespace = fix,space-before-tab,tab-in-indent,trailing-space

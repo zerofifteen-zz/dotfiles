@@ -9,7 +9,6 @@
 ## Credits
 
 * OS X defaults based on [@mathiasbynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
-* Gruntfile and prompts based on [@eduardolundgren's dotfiles](https://github.com/eduardolundgren/dotfiles)
 * Bash scripts based on [@cowboys's dotfiles](https://github.com/cowboy/dotfiles)
 
 

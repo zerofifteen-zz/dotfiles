@@ -1,9 +1,7 @@
 # Editing
 
 if [[ ! "$SSH_TTY" && "$OSTYPE" =~ ^darwin ]]; then
-  export EDITOR='subl -w'
-  export LESSEDIT='subl %f'
-  alias q='subl'
+  export EDITOR='{{ editor }}'
 else
   export EDITOR=$(type nano pico vi vim 2>/dev/null | sed 's/ .*$//;q')
   alias q="$EDITOR -w -z"
