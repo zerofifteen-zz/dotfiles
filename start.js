@@ -1,17 +1,18 @@
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 
-import scripts from './scripts';
+import banner from './scripts/banner';
+import copy from './scripts/copy';
 import logger from './scripts/logger';
+import shell from './scripts/shell';
+import symlink from './scripts/symlink';
+
+import { configureMacOs } from './scripts/shell';
+import { isMacOs } from './scripts/utils';
 
 
-const init = async function () {
-  const questions = [
-    {
-      type: 'input',
-      name: 'macOs',
-      message: `Which ${ chalk.yellow('computer name') } would you like to use?`,
-    },
+const promptUser = async function () {
+  let questions = [
     {
       type: 'input',
       name: 'destination',
@@ -33,17 +34,29 @@ const init = async function () {
       name: 'editor',
       message: `Which ${ chalk.yellow('editor') } would you like to use?`,
       choices: ['atom', 'subl -n -w']
-    }
+    },
   ];
 
-  await scripts.banner();
+  if (isMacOs) {
+    questions.push({
+      type: 'list',
+      name: 'macOsConfigure',
+      message: `Would you like to configure ${ chalk.yellow('macOs') }?`,
+      choices: ['no', 'yes']
+    });
+  };
+
   const answers = await inquirer.prompt(questions);
+  return answers;
+};
+
+
+const init = async function () {
+  await banner();
+  const answers = await promptUser();
   const destination = `${ process.env['HOME'] }/${ answers.destination }`;
   const context = {
     destination: answers.destination,
-    macOs: {
-      name: answers.macOs
-    },
     editor: answers.editor,
     git: {
       email: answers.gitEmail,
@@ -52,12 +65,16 @@ const init = async function () {
   };
 
   try {
-    await scripts.copy(destination, context);
+    await copy(destination, context);
     logger.info();
-    await scripts.symlink(destination);
+    await symlink(destination);
     logger.info();
-    await scripts.shell(destination);
+    await shell(destination);
     logger.info();
+    if (answers.macOsConfigure === 'yes') {
+      await configureMacOs(destination);
+      logger.info();
+    }
   } catch (error) {
     console.error(error);
   }
