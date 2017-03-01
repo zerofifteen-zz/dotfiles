@@ -40,6 +40,7 @@ export default async function (destination) {
     `npm config set prefix '~/.npm-packages'`,
     `npm install -g yarn`,
     `npm install -g nodemon`,
+    `npm install -g fkill-cli`,
     `export PATH="$PATH:$HOME/.npm-packages/bin"`
   ]);
 
