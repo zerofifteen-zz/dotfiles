@@ -35,8 +35,8 @@ export default async function (destination) {
   await exec([
     `npm config set prefix '/usr/local'`,
     `sudo npm install -g n`,
-    `n latest`,
-    `n stable`,
+    `sudo n latest`,
+    `sudo n stable`,
     `npm config set prefix '~/.npm-packages'`,
     `npm install -g yarn`,
     `npm install -g nodemon`,
