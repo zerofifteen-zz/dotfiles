@@ -44,6 +44,11 @@ export default async function (destination) {
     `export PATH="$PATH:$HOME/.npm-packages/bin"`
   ]);
 
+  // Link atom
+  await exec([
+    `ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom`
+  ]);
+
   // Install PIP
   await exec([
     `sudo easy_install pip`
