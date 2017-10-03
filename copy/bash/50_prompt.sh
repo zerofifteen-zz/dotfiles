@@ -156,5 +156,3 @@ function prompt_command() {
 }
 
 PROMPT_COMMAND="prompt_command"
-
-complete -W "$(teamocil --list)" teamocil
